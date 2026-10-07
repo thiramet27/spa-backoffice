@@ -1,0 +1,17 @@
+{
+  "name": "spa-backoffice",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test \"src/**/*.test.ts\" \"tools/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "check:boundaries": "tsx scripts/check-module-boundaries.ts",
+    "check": "npm run typecheck && npm run check:boundaries && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
